@@ -1,0 +1,148 @@
+.navbar {
+  padding: 20px 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s ease;
+  position: fixed;
+  z-index: 1;
+}
+
+.scrolling-active {
+  transition: all 0.4s ease;
+  background: white;
+  box-shadow: 0px 10px 10px rgba(255, 99, 71, 0.224);
+}
+
+.navbar .logo {
+  width: 150px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: #49557e;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+.navbar-menu li {
+  cursor: pointer;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.navbar button {
+  background: transparent;
+  font-size: 16px;
+  color: #49557e;
+  border: 1px solid tomato;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navbar button:hover {
+  background-color: #fff4f2;
+}
+
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
+}
+
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: tomato;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+}
+
+@media (max-width: 1050px) {
+  .navbar .logo {
+    width: 140px;
+  }
+  .navbar-menu {
+    gap: 20px;
+    font-size: 17px;
+  }
+  .navbar-right {
+    gap: 30px;
+  }
+  .navbar-right img {
+    width: 22px;
+  }
+  .navbar-right button {
+    padding: 8px 25px;
+  }
+}
+@media (max-width: 900px) {
+  .navbar .logo {
+    width: 120px;
+  }
+  .navbar-menu {
+    gap: 15px;
+    font-size: 16px;
+  }
+  .navbar-right {
+    gap: 20px;
+  }
+  .navbar-right img {
+    width: 20px;
+  }
+  .navbar-right button {
+    padding: 7px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none;
+    transition: all 0.3s ease;
+  }
+  .nav-active {
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, 25%);
+    background-color: #fff;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 10px 10px rgba(255, 99, 71, 0.224);
+  }
+  .hamburger {
+    display: block;
+    transition: all 0.3s ease;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar .logo {
+    width: 100px;
+  }
+  .nav-active {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, 20%);
+  }
+  .navbar-right button {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+}
