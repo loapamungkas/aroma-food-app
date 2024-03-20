@@ -15,10 +15,10 @@ const Navbar = ({ setShowLogin }) => {
     });
   }, []);
 
-  const { getTotalCartAmount } = useContext(StoreContext);
+  const { getTotalCartAmount, getTotalItem } = useContext(StoreContext);
   return (
     <div className={scroll ? 'scrolling-active navbar' : 'navbar'}>
-      <Link to={'/'}>
+      <Link to={'/'} onClick={() => setMenu('home')}>
         <img src={assets.logo} alt="" className="logo" />
       </Link>
       <ul className={navActive ? 'nav-active navbar-menu' : 'navbar-menu'}>
@@ -37,7 +37,7 @@ const Navbar = ({ setShowLogin }) => {
           <Link to={'/cart'}>
             <img src={assets.basket_icon} alt="" />
           </Link>
-          <div className={getTotalCartAmount() === 0 ? '' : 'dot'}></div>
+          {getTotalCartAmount() === 0 ? <></> : <div className="dot">{getTotalItem()}</div>}
         </div>
         <button onClick={() => setShowLogin(true)}>Sign Up</button>
         <img className="hamburger" onClick={() => setNavActive((prev) => (prev === false ? true : false))} hidden src={assets.hamburger_icon} alt="" />

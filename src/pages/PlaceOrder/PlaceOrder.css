@@ -31,3 +31,16 @@
   width: 100%;
   margin-top: 26px;
 }
+
+@media (max-width: 750px) {
+  .place-order {
+    flex-direction: column;
+    padding-top: 60px;
+  }
+  .place-order-left .title {
+    margin-bottom: 25px;
+  }
+  .place-order-right {
+    margin-top: -20px;
+  }
+}

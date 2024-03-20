@@ -6,6 +6,7 @@
   grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
   align-items: center;
   color: grey;
+  column-gap: 10px;
   font-size: max(1vw, 12px);
 }
 .cart-items-item {
@@ -13,7 +14,7 @@
   color: black;
 }
 .cart-items-item img {
-  width: 50px;
+  width: 40px;
 }
 .cart hr {
   height: 1px;
@@ -22,6 +23,16 @@
 }
 .cart-items-item .cross {
   cursor: pointer;
+  background-color: tomato;
+  color: white;
+  padding: 5px 0px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+}
+.cart-items-item .cross:hover {
+  cursor: pointer;
+  background-color: rgb(222, 83, 58);
 }
 .cart-bottom {
   margin-top: 50px;
